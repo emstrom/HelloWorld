@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSMutableArray * array;
+}
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation ViewController
@@ -17,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self Main];
     //skriv kod här!
 	// Do any additional setup after loading the view, typically from a nib.
@@ -29,11 +33,27 @@
 
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
-    [jsonData setJSON]
+    [jsonData setJSON];
+    array = [jsonData GetArray];
+    // NSLog(@"%@", array[0]); skriv ut allting som finns
+
 }
 - (IBAction)button2:(id)sender {
-    NSLog(@"YOU PRESSED THE BUTTON!");
-    self.label.text = @"YOU PRESSED THE BUTTON!";
+    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
+    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
 }
+- (NSInteger)getRandomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
+{
+   return min + arc4random() % (max - min + 1);
+}
+
+
+- (IBAction)swiperight:(id)sender {
+    NSLog(@"YOU SWIPE THE BUTTON!");
+    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
+    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+}
+
+
 
 @end
