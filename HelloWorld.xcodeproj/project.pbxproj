@@ -21,6 +21,7 @@
 		CB0251B918F43B2E0099EB0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB02519B18F43B2E0099EB0D /* UIKit.framework */; };
 		CB0251C118F43B2E0099EB0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB0251BF18F43B2E0099EB0D /* InfoPlist.strings */; };
 		CB0251C318F43B2E0099EB0D /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0251C218F43B2E0099EB0D /* HelloWorldTests.m */; };
+		CB0251CE18F4471E0099EB0D /* jsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0251CD18F4471E0099EB0D /* jsonData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CB0251BE18F43B2E0099EB0D /* HelloWorldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorldTests-Info.plist"; sourceTree = "<group>"; };
 		CB0251C018F43B2E0099EB0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB0251C218F43B2E0099EB0D /* HelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTests.m; sourceTree = "<group>"; };
+		CB0251CC18F4471E0099EB0D /* jsonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsonData.h; sourceTree = "<group>"; };
+		CB0251CD18F4471E0099EB0D /* jsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsonData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		CB02519D18F43B2E0099EB0D /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				CB0251CC18F4471E0099EB0D /* jsonData.h */,
+				CB0251CD18F4471E0099EB0D /* jsonData.m */,
 				CB0251A618F43B2E0099EB0D /* AppDelegate.h */,
 				CB0251A718F43B2E0099EB0D /* AppDelegate.m */,
 				CB0251A918F43B2E0099EB0D /* Main.storyboard */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB0251AE18F43B2E0099EB0D /* ViewController.m in Sources */,
+				CB0251CE18F4471E0099EB0D /* jsonData.m in Sources */,
 				CB0251A818F43B2E0099EB0D /* AppDelegate.m in Sources */,
 				CB0251A418F43B2E0099EB0D /* main.m in Sources */,
 			);
