@@ -7,33 +7,24 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController (){
-    NSMutableArray * array;
-}
-@property (weak, nonatomic) IBOutlet UILabel *label;
-
-@end
-
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 
     [self Main];
     //skriv kod här!
 	// Do any additional setup after loading the view, typically from a nib.
 }
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+//--------- MAIN -----------
+
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
-    imageViews UserInteractionEnabled = YES;
     [jsonData setJSON];
     array = [jsonData GetArray];
     // NSLog(@"%@", array[0]); skriv ut allting som finns
@@ -49,21 +40,10 @@
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
 }
 
-- (IBAction)SwipeRight:(id)sender {
-    NSLog(@"RIGHT");
-    int i = [self getRandomNumberBetween:0 maxNumber:[array count]-1];
-    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+- (IBAction)contact:(id)sender {
+    NSString *recipients = @"mailto:beerdev@gmail.com?cc=second@example.com&subject=BeerDev Application";
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:recipients]];
 }
-- (IBAction)SwipeLeft:(id)sender {
-    NSLog(@"LEFT");
-    int i = [self getRandomNumberBetween:0 maxNumber:[array count]-1];
-    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
-}
-
-
-- (IBAction)TAPTAP:(id)sender {
- NSLog(@"TAP");
-}
-
 
 @end

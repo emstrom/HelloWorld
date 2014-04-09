@@ -17,16 +17,24 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DSC05818.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SrC-rv-V3q">
-                                <rect key="frame" x="-4" y="0.0" width="324" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="JrK-pS-Z5U" appends="YES" id="Oyb-yp-W9V"/>
-                                    <outletCollection property="gestureRecognizers" destination="aBe-Hs-oUx" appends="YES" id="f7N-55-3Ld"/>
-                                </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSq-l5-0Cf">
+                                <rect key="frame" x="20" y="500" width="111" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Om oss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KJ7-t4-9nf" kind="modal" id="VBp-KY-7u7"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-OX-BJB">
-                                <rect key="frame" x="4" y="81" width="312" height="58"/>
+                                <rect key="frame" x="4" y="40" width="312" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="Get Random Beer!">
@@ -38,14 +46,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqa-4y-xuu">
-                                <rect key="frame" x="29" y="137" width="263" height="90"/>
+                                <rect key="frame" x="20" y="79" width="263" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qc-Hx-TOE">
-                                <rect key="frame" x="103" y="278" width="111" height="58"/>
+                                <rect key="frame" x="181" y="500" width="111" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Next Page">
@@ -64,23 +72,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Wld-ao-e5v">
-                    <connections>
-                        <action selector="TAPTAP:" destination="vXZ-lx-hvc" id="wyq-Wj-3aU"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="JrK-pS-Z5U">
-                    <connections>
-                        <action selector="SwipeRight:" destination="vXZ-lx-hvc" id="Oya-A1-Fcd"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="aBe-Hs-oUx">
-                    <connections>
-                        <action selector="SwipeLeft:" destination="vXZ-lx-hvc" id="bAh-s8-gWw"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-651" y="532"/>
+            <point key="canvasLocation" x="-655" y="552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sF2-A0-i8z">
@@ -107,8 +100,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DSC05818.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZKF-o6-Si4">
-                                <rect key="frame" x="-5" y="0.0" width="325" height="568"/>
+                                <rect key="frame" x="-2" y="-20" width="325" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -116,7 +110,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DX-62-eAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-237" y="508"/>
+            <point key="canvasLocation" x="-231" y="532"/>
+        </scene>
+        <!--Omoss View Controller-->
+        <scene sceneID="Ode-HS-L5f">
+            <objects>
+                <viewController storyboardIdentifier="OmossViewController" id="KJ7-t4-9nf" customClass="OmossViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WKK-1z-Pxb"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1e-Fb-4Xj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yIw-5B-CJh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DSC05818.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Oe2-fv-mqD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Välkommen!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-AL-zst">
+                                <rect key="frame" x="51" y="26" width="218" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="29" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="tkb-AE-WaT">
+                                <rect key="frame" x="29" y="121" width="262" height="335"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Denna applikation hjälper dig att få en överblick över ölutbudet i Kistan. Kistan är INsektionens sektionslokal på KTH Campus Kista. 
+
+Applikation är skapad av BeerDev, en projektgrupp bestående av 9 KTH studenter. Vi skapade denna applikation i en IT-projektkurs under våren 2014. Vi har arbetat med detta projekt under 5 veckor och har skapat en applikation anpassad för iOS och en för Andriod.
+
+Vi som har skapat applikationen är Maxim Frisk, Anne Golinski, Joakim Larsson, Jesper Nowak, Lina Poon, Christopher State, Patrik Stigeborn, Emma Ström,  Jonathan Strömgren.
+
+*Observera att alla priser gälller medlemmar i INsektionen. </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-O1-qsT">
+                                <rect key="frame" x="44" y="457" width="233" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Kontakta BeerDev@gmail.com">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MailButton:" destination="KJ7-t4-9nf" eventType="touchUpInside" id="5Xq-mL-SjC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8oG-gc-Rut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655" y="1265"/>
         </scene>
     </scenes>
     <resources>

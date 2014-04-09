@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "jsonData.h"
+#import <MessageUI/MessageUI.h>
 
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController {
+    NSMutableArray * array;
+}
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
+
