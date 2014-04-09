@@ -20,14 +20,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="R3v-Z6-g7W" appends="YES" id="8GU-Qt-tdb"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-OX-BJB">
-                                <rect key="frame" x="4" y="81" width="312" height="58"/>
+                                <rect key="frame" x="8" y="78" width="312" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Get Random Beer!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,30 +34,73 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqa-4y-xuu">
-                                <rect key="frame" x="37" y="137" width="263" height="90"/>
+                                <rect key="frame" x="33" y="137" width="263" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXL-l9-FjC">
+                                <rect key="frame" x="88" y="287" width="153" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.7882353663444519" green="0.7882353663444519" blue="0.7882353663444519" alpha="1" colorSpace="deviceRGB"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zE5-2x-ZgX" appends="YES" id="okd-72-DwQ"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="label" destination="Rqa-4y-xuu" id="sKg-Q7-kHp"/>
+                        <outlet property="streckkod" destination="mXL-l9-FjC" id="S5d-nw-AcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="R3v-Z6-g7W">
+                <swipeGestureRecognizer direction="left" id="zE5-2x-ZgX">
                     <connections>
-                        <action selector="swiperight:" destination="vXZ-lx-hvc" id="txP-Kf-g3y"/>
+                        <segue destination="n6q-7N-a22" kind="modal" id="lLa-6K-Maq"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-76" y="19"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qhq-XO-0Qd">
+            <objects>
+                <viewController id="n6q-7N-a22" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FWy-tH-5HU"/>
+                        <viewControllerLayoutGuide type="bottom" id="T8k-jk-dXM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="jkc-rM-tDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="öl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="83H-ZI-DIM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YVG-2b-JxU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1r-qb-yve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="rBc-Al-gSI">
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="modal" id="atU-I8-PLm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="452" y="14"/>
         </scene>
     </scenes>
     <resources>
         <image name="DSC05818.jpg" width="3072" height="2041"/>
+        <image name="öl.jpg" width="176" height="286"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

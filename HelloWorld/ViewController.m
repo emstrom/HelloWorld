@@ -12,6 +12,8 @@
     NSMutableArray * array;
 }
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *streckkod;
+
 
 @end
 
@@ -24,7 +26,10 @@
     [self Main];
     //skriv kod här!
 	// Do any additional setup after loading the view, typically from a nib.
+    
+   
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -32,16 +37,18 @@
 }
 
 -(void)Main{
-    NSLog(@"HEEJ LINA!!!");
-    NSLog(@"HEEJ LINA och EMMA!!!");
+    NSLog(@"Get a random beer");
+    
     [jsonData setJSON];
     array = [jsonData GetArray];
     // NSLog(@"%@", array[0]); skriv ut allting som finns
 
 }
 - (IBAction)button2:(id)sender {
-    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
+    int i = (int)[self getRandomNumberBetween:0 maxNumber:[array count]-1];
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+    self.streckkod.text=[array[i] objectForKey:@"Artikelnummer"];
+   
 }
 - (NSInteger)getRandomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
 {
@@ -49,11 +56,6 @@
 }
 
 
-- (IBAction)swiperight:(id)sender {
-    NSLog(@"YOU SWIPE THE BUTTON!");
-    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
-    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
-}
 
 
 

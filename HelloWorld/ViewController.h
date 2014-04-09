@@ -10,7 +10,8 @@
 #import "jsonData.h"
 
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
+
 
 
 @end
