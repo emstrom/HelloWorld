@@ -33,6 +33,7 @@
 
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
+    NSLog(@"Test Branch och Merge! ");
     [jsonData setJSON];
     array = [jsonData GetArray];
     // NSLog(@"%@", array[0]); skriv ut allting som finns
@@ -54,6 +55,10 @@
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
 }
 
+//- (IBAction)nextPageButton:(id)sender {
+
+    
+//}
 
 
 @end
