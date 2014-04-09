@@ -33,19 +33,19 @@
 
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
-    NSLog(@"Test Branch och Merge! ");
     [jsonData setJSON];
     array = [jsonData GetArray];
     // NSLog(@"%@", array[0]); skriv ut allting som finns
-
 }
+- (NSInteger)getRandomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max{
+    return min + arc4random() % (max - min + 1);
+}
+
+
+
 - (IBAction)button2:(id)sender {
     int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
-}
-- (NSInteger)getRandomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
-{
-   return min + arc4random() % (max - min + 1);
 }
 
 
@@ -55,10 +55,6 @@
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
 }
 
-//- (IBAction)nextPageButton:(id)sender {
-
-    
-//}
 
 
 @end
