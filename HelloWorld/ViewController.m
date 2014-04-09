@@ -33,6 +33,7 @@
 
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
+    imageViews UserInteractionEnabled = YES;
     [jsonData setJSON];
     array = [jsonData GetArray];
     // NSLog(@"%@", array[0]); skriv ut allting som finns
@@ -44,17 +45,25 @@
 
 
 - (IBAction)button2:(id)sender {
-    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
+    int i = [self getRandomNumberBetween:0 maxNumber:[array count]-1];
+    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+}
+
+- (IBAction)SwipeRight:(id)sender {
+    NSLog(@"RIGHT");
+    int i = [self getRandomNumberBetween:0 maxNumber:[array count]-1];
+    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+}
+- (IBAction)SwipeLeft:(id)sender {
+    NSLog(@"LEFT");
+    int i = [self getRandomNumberBetween:0 maxNumber:[array count]-1];
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
 }
 
 
-- (IBAction)swiperight:(id)sender {
-    NSLog(@"YOU SWIPE THE BUTTON!");
-    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
-    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+- (IBAction)TAPTAP:(id)sender {
+ NSLog(@"TAP");
 }
-
 
 
 @end
