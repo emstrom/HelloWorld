@@ -33,6 +33,7 @@
 
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
+    NSLog(@"HEEJ LINA och EMMA!!!");
     [jsonData setJSON];
     array = [jsonData GetArray];
     // NSLog(@"%@", array[0]); skriv ut allting som finns
