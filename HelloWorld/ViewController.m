@@ -11,7 +11,8 @@
 @interface ViewController (){
     NSMutableArray * array;
 }
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *label;        //Definiera grejor
+@property (weak, nonatomic) IBOutlet UILabel *pris;
 
 @end
 
@@ -33,27 +34,28 @@
 
 -(void)Main{
     NSLog(@"HEEJ LINA!!!");
-    [jsonData setJSON];
-    array = [jsonData GetArray];
+    NSLog(@"Hej Emma!");
+    
+    [jsonData setJSON];                                           // Hämta data,clona
+    array = [jsonData GetArray];                                                // Tilldela
     // NSLog(@"%@", array[0]); skriv ut allting som finns
 }
-- (NSInteger)getRandomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max{
+
+- (NSInteger)getRandomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max{        // Random generator
     return min + arc4random() % (max - min + 1);
 }
 
-
-
-- (IBAction)button2:(id)sender {
-    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
+- (IBAction)button2:(id)sender {                                                 // Get Random Beer! knapp
+    int i = [self getRandomNumberBetween:0 maxNumber:[array count]-1];              // def. intervall
+    // def. Lable ändras till Artikelnamn
     self.label.text = [array[i] objectForKey:@"Artikelnamn"];
+    // def. Price -> Pris, vid blandning av %d med %@ gör som nedan
+    self.pris.text = [[NSString alloc] initWithFormat:@"%@ kr",[array[i] objectForKey:@"Utpris"]];
+    
 }
 
 
-- (IBAction)swiperight:(id)sender {
-    NSLog(@"YOU SWIPE THE BUTTON!");
-    int i = [self getRandomNumberBetween:1 maxNumber:[array count]-1];
-    self.label.text = [array[i] objectForKey:@"Artikelnamn"];
-}
+
 
 
 

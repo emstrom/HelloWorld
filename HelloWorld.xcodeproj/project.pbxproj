@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E8DD8BE18F533910081DABD /* 0001-01-1954-a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E8DD8BD18F533910081DABD /* 0001-01-1954-a.jpg */; };
 		CB02519818F43B2E0099EB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB02519718F43B2E0099EB0D /* Foundation.framework */; };
 		CB02519A18F43B2E0099EB0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB02519918F43B2E0099EB0D /* CoreGraphics.framework */; };
 		CB02519C18F43B2E0099EB0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB02519B18F43B2E0099EB0D /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E8DD8BD18F533910081DABD /* 0001-01-1954-a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0001-01-1954-a.jpg"; sourceTree = "<group>"; };
 		CB02519418F43B2E0099EB0D /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB02519718F43B2E0099EB0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB02519918F43B2E0099EB0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 		CB02519D18F43B2E0099EB0D /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				3E8DD8BD18F533910081DABD /* 0001-01-1954-a.jpg */,
 				CB85BB8E18F44E9B00288C50 /* DSC05818.jpg */,
 				CB0251CC18F4471E0099EB0D /* jsonData.h */,
 				CB0251CD18F4471E0099EB0D /* jsonData.m */,
@@ -239,6 +242,7 @@
 				CB0251B018F43B2E0099EB0D /* Images.xcassets in Resources */,
 				CB0251A218F43B2E0099EB0D /* InfoPlist.strings in Resources */,
 				CB0251AB18F43B2E0099EB0D /* Main.storyboard in Resources */,
+				3E8DD8BE18F533910081DABD /* 0001-01-1954-a.jpg in Resources */,
 				CB85BB8F18F44E9B00288C50 /* DSC05818.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
